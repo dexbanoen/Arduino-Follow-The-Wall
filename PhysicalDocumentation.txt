@@ -1,0 +1,59 @@
+Introduction:
+    We begin by learning basic Arduino programming and gradually move onto moving a
+    robot using an ultrasonic sensor. The main goal is to program a robot to move along a wall and
+    make a sharp turn to avoid crashing into a perpendicular wall.
+
+Material and Methodology:
+    - Arduino Robot Kit
+    - Ultrasonic Sensor HC-SR04
+    - Computer
+     The strategy going into this project was theoretically simple. I wanted my robot to be selfadjusting no matter where its placement was in the track and have it work in real life. To do so,
+    relation operations were heavily used in my code. By using If and Else If Statements, it allowed
+    my robot to move accordingly depending on its distance away from the wall. There are “five
+    main sections” in my code that I named appropriately: Enter, Too Close, First Wall, Sharp
+    Turn, Second Wall. This is the “skeleton” of my code. “Enter” is the code used to approach the
+    wall until reaches a certain distance. At this certain distance, the code for “First Wall” is in
+    action, this allows the robot to move along the wall in a zig-zag pattern. This zig-zag pattern
+    movement is crucial because it helps the robot detect the wall continuously at small intervals so
+    it can be ready for its next micro adjustment. If I were to program the robot to move in a straight
+    line, it would not be able to adapt to any changes. Once the robot does not detect any wall, it
+    enters the “Sharp Turn” range where it will perform an approximate 90-degree angle turn and
+    move forward slightly to detect the second wall. Finally, the robot will scan for its second wall
+    and move along it. Again, using the zig-zag pattern. The “Too Close” is an emergency code,
+    where if it gets to close to the wall, it will attempt to backup and reset its position.
+Results and Discussion
+
+    The code worked decently well on the super challenge simulator, therefore the logic
+    behind the robot’s movement was satisfactory. The robot was able to complete each course at an
+    average of 32 seconds. I could have probably made it complete the challenge under 30 seconds
+    by adjusting the speeds of each servo but did not have enough time to do so. Uploading my code
+    into the Arduino kit introduced many variables that I did not account for. When I first uploaded
+    my code into the system without any adjustments, it would over-exaggerate its movement and
+    rotate way too much, almost 2-3 times is own axis. It would never follow the wall as intended.
+    The whole idea was not to rewrite an entire new code for this to work as it would only defeat the
+    purpose of applying theories into real life. I decided to preserve the “skeleton” of the code or the
+    “five main sections”, but to fine tune each section so it can move just like in the simulator.
+    Comparing both virtual and physical codes, there are very similar things seen in both, such as the
+    different sequences. In this manner, the transfer of theory into the real world is not completely
+    ignored. After many adjustments, I was able to get the robot to run properly, but it was not as
+    consistent was I wanted it to be. My code was not the only issue that caused inconsistency. The
+    hardware was not the best either. After some testing, I programmed the robot to run in a straight
+    line and unfortunately, there was a slight turn to the right, meaning that one of the servos were
+    defective. Similarly, debris often got stuck in the servos from which I had to constantly remove
+    with needle nose pliers. Setting up the Arduino kit was somewhat a struggle as well. Obvious
+    issues such as weight distribution and tangled wires were also quite annoying to deal with.
+    Consistency was the main problem. During the final moments of class, I tried to adjust
+    everything as I could, but still ended up with consistency issues. Fortunately, I was able to get
+    one perfect run on camera during the evaluation lab class (video shown in works cited). There
+    are many improvements that can be done for the physical world. After analyzing other student’s,
+    an obvious pattern was seen, which was “simplicity”. Many of the robots used linear movements
+    with slight turning for it to complete the course. This confused me as it made me question the
+    generality of their code and its adaptability to other tracks. Their success was relatively
+    moderate.
+    
+    In conclusion, although my robot did not meet the consistency that I was hoping for, I was
+    pleased to see that the theory was able to translate into practice with minor adjustments to the
+    code. I was able to keep the same structure. To improve consistency, there are certainly better
+    ways to improve the actual code, however, I do believe that the skeleton of my code is quite
+    optimal. This was my first-time ever learning how to code and I am looking forward to bigger
+    projects soon

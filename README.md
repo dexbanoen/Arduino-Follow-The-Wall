@@ -1,6 +1,17 @@
 Arduino C++ Follow The Wall Robotics Dawson Engineering Lab Component
+Non-linear and adaptable pathing.
+
+SKILLS:
+- Arduino
+- Arduino IDE
+- Basic C++
+- Troubleshooting / Testing
+- Robot Assembly
+- Considered real-time variables, such as faulty components, friction.
 
 CONTEXT:
+
+Virtual and Physical Components
 
 The lab component required students to assemble an arduino robot given a frame, two motors, an ultrasonic sensor and a motherboard.
 Students were responsible of assembling and programming the robots using Arduino IDE.
@@ -8,67 +19,7 @@ Students were responsible of assembling and programming the robots using Arduino
 During official grading, students were presented with a "maze/ wall" and were tasked to have the robot follow the wall WITHOUT linear
 pathing. Students were unaware of the orientation of the maze prior to demo (on the spot programming).
 
-Virtual Testing: 
+CREDITS:
 
-Introduction:
-  Learning basic C++ Arduino integrations is the main starting point. After learning the
-  basics, the idea is to conceptualize and think about how to make the virtual robot gather coins in
-  various tracks. The virtual simulator consists of two walls and a sharp right turn. Coins are
-  placed parallel to each wall as certain distances.
-Material and Methodology:
-
-  Initially, moving the robot linearly forward/ backward was the most familiar solution.
-  However, this introduced many drawbacks such as the lack of self-adjusting properties and leans
-  more towards hard coding. Although linear movement may be the fastest, it is almost impossible
-  to make it adaptable to different tracks. The idea was to move the robot in such a way to detect a
-  wall every few intervals. Using slight turns, the robot will be able to detect any wall so it can
-  move accordingly. Slight turns are most advantageous in this situation because assume the robot
-  is directly perpendicular to a wall, it can make slight turns to eventually find a parallel position.
-  In the case of a straight movement towards a perpendicular wall, it will crash. There must turning
-  for the robot to be self-adjusting. This was the main idea for it to complete each course. To do so,
-  the implementation of relation operations was super important. Using the distance between the
-  wall and robot, the use of If statements dictate the robot’s movement with respect to the wall.
-  The code was written in such away that it first approaches the wall, then moves parallel to that
-  wall using a zig-zag movement. Another very significant factor to consider was to create a code
-  that would easily translate into real-life without having to rewrite it entirely. To accomplish this,
-  I separated my code into sections. These sections are the “skeleton” of the code. More details on
-  the “Physical Lab Report”.
-  
-  To summarize the methodology behind the code, it was based it on two main criteria’s:
-  the ability to be self-adjusting and the ease of translating it into robotic hardware without a
-  complete rewrite. Self-adjustability was achieved by implementing sudden movement/ turns and
-  ease of translation was achieved by creating a code skeleton.
-Results and Discussion:
-  The code was successfully able to clear each course of the super challenge with an average
-  time of 32 seconds. This could be improved dramatically, but due to lack of experience and time,
-  this was the fastest average time achieved. This concludes that the methodology behind the code
-  worked to an extent. However, throughout the coding process, it was very difficult to avoid
-  touching the second wall. Although it was able to gather all the coins, the use of delays was
-  somewhat hard to implement since the ultrasonic sensor will only scan walls at the end of each
-  delay, therefore it would often crash into the second wall. Either delays were too long, which
-  caused crashing or delays were too short, failing to gather a coin. Achieving the perfect delays
-  was a very tedious process and unfortunately subject to hard coding. After finding the perfect
-  delays for certain parts of the code, everything functioned as it should. Another difficulty was
-  coding the 90 degree turn to suit every course. Since the gap between the walls differ between
-  each of the courses, it was rather hard to think of a perfect solution. This was solved by
-  performing a constant backing up and moving forward pattern, all while making an approximate
-  90 degree turn at the end of the sequence. For this sequence, for the car to move forward, the
-  delay is greater when it moves forward compared to backing up. Now, let’s us assume that
-  instead of a right turn, the course was flipped and now has a left turn. Obviously, the code would
-  not work since the car is orientated the opposite way, however if the ultrasonic sensor was also
-  placed right side of the body, then it could work. The only thing that would have to be done is to
-  code the inverse movements. Since I built my code around adaptability, it should be able to
-  complete the course. Assume another scenario where the coins are a different distance away
-  from the wall. To adapt to this, the simple thing to do is to change the parameter distances as
-  seen, since the robot will always find itself parallel to a wall. These are all theoretical
-  assumptions. As for improvements inside the virtual simulator itself, the most efficient thing to
-  do is prioritize more linear movements with slight turn adjustments, instead of complex solutions
-  such as the “zig-zag”. This would decrease the time to gather all coins and make the code simple.
-  Nevertheless, the code was designed to be easily adjustable in the real-life experiment, which
-  was the deciding factor going into this.
-  
-  In conclusion, the methodology going into the project was satisfying. Although, there are some
-  obvious speed issues, the sacrifice of time for adaptability was overall more important especially
-  in a challenge where each course is different.
-  Attached to this submission is the code under txt. format. Comments are written to explain the
-  logic behind the robot’s movement.
+This project was under Dawson College Physics Engineering lab component. All topics and material may be subject of change depending when
+you are viewing this.

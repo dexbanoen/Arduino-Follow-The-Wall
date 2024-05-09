@@ -1,5 +1,9 @@
 Arduino C++ Follow The Wall Robotics Dawson Engineering Lab Component
-Non-linear and adaptable pathing.
+
+ACCOMPLISHMENTS:
+- Received full marks for navigating "maze" under 30 seconds.
+- Programmed a non-linear and dynamic pathing all under two hours.
+- Assembled and adjusted a robot (motors, ultrasonic sensor, motherboard and frame)
 
 SKILLS:
 - Arduino
